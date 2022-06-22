@@ -136,7 +136,7 @@ namespace Template
         protected void BtnSil_Click(object sender, EventArgs e)
         {
             //DELETE FROM table_name WHERE condition;
-            string SilAww = "Delete FROM Siparis WHERE MusteriID  ";
+            string SilAww = "Delete FROM Siparis WHERE MusteriID =@MusteriID ";
             SqlConnection SqlCon = usak.baglan();
             SqlCommand Comm = new SqlCommand();
             Comm.Parameters.AddWithValue("@SiparisTarihi", Calendar1.SelectedDate.ToShortDateString());
